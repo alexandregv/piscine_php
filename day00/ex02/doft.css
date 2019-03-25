@@ -4,6 +4,7 @@ body {
 
 .container {
     width: 70%;
+    height: 200px;
     margin: auto;
 }
 
@@ -21,6 +22,24 @@ body {
 
 .top-right {
     float: right;
+    display: flex;
+    height: 100%;
+}
+
+.top-right div.container-buttons {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 2px 5px 0;
+    height: 100%;
+}
+.top-right div.container-buttons a {
+    display: block;
+}
+.top-right div.container-buttons a:nth-child(2) {
+    margin-top: auto;
+}
+#ireload, #iclose {
+    width: 15px;
 }
 
 .mid {
@@ -58,9 +77,14 @@ body {
     background-repeat: repeat;
 }
 
+#oeil {
+	border: 5px solid red;
+	border-radius: 5px;
+}
+
 .bot {
     background-color: #8eff92;
-    width: 35%;
+    width: 500px;
     height: 200px;
     margin-top: -100px;
     z-index: 1;

@@ -1,62 +1,66 @@
 body {
-    margin: 0;
-    padding: 0;
-    background-image: url("https://www.thoughtco.com/thmb/07W0mpQ_K2BG2GNdi1AiFFlUDeI=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/chemistry-glassware-56a12a083df78cf772680235.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    font-size: ;
+	margin: 0;
+	padding: 0;
+	background-image: url("https://www.thoughtco.com/thmb/07W0mpQ_K2BG2GNdi1AiFFlUDeI=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/chemistry-glassware-56a12a083df78cf772680235.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	font-size: ;
 }
+
 table {
-    margin: 0 auto;
+	margin: 0 auto;
 }
-table tr td{
-    margin: 0;
-    width: 5vw;
-    height: 10vh;
+
+table tr td {
+	margin: 0;
+	width: 5vw;
+	height: 10vh;
 }
+
 p {
-    margin: 2%;
+	margin: 2%;
 }
+
 .poids {
-    text-align: right;
+	text-align: right;
 }
 
 .nom {
-    text-align: center;
+	text-align: center;
 }
 
 .numero {
-    text-align: left;
+	text-align: left;
 }
 
 .autres {
-    background-color: #2ebe46;
+	background-color: #2ebe46;
 }
 
 .actinides {
-    background-color: #eb4a24;
+	background-color: #eb4a24;
 }
 
 .metaux-alcalino-terreux {
-    background-color: #fdec3d;
+	background-color: #fdec3d;
 }
 
 .metaux-de-transition {
-    background-color: #7b83a5;
+	background-color: #7b83a5;
 }
 
 .lanthanides {
-    background-color: #7b3587;
+	background-color: #7b3587;
 }
 
 .halogenes {
-    background-color: #dd72c9;
+	background-color: #dd72c9;
 }
 
 .gaz-nobles {
-    background-color: #2498ce;
+	background-color: #2498ce;
 }
 
 .metaux-alcalins {
-    background-color: #f80029;
+	background-color: #f80029;
 }

@@ -1,91 +1,77 @@
 body {
-    font-family: helvetica, serif;
-    margin: 0px;
-    padding: 0px;
+	margin: 0px;
+	padding: 0px;
 }
 
 nav {
-    width: 100%;
-    background-color: rgba(68, 68, 68, 0.575);
+	width: 100%;
+	background-color: #862b70;
 }
 
 nav > ul {
-    margin: 0px;
-    padding: 0px;
+	margin: 0px;
+	padding: 0px;
+	display: inline-block;
 }
 
 nav > ul > li {
-    float: left;
-    position: relative;
+	float: left;
+	position: relative;
 }
 
 nav ul li a {
-    padding: 20px 30px;
-    color: white;
+	padding: 20px 30px;
+	color: white;
+}
+
+.dropdown li {
+	border-bottom: 2px solid #862b70;
+}
+
+.dropdown li a {
+	padding: 15px 30px;
+	font-size: 15px;
+	width: 150px;
+	background-color: #862b70;
 }
 
 nav > ul::after {
-    content: "";
-    display: block;
-    clear: both;
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.dropdown {
+	display: none;
+}
+
+nav li:hover .dropdown {
+	display: inline-block;
+	position: absolute;
+	padding: 0px;
+}
+
+.dropdown li {
+	border-bottom: 1px solid white;
 }
 
 nav li {
-    list-style-type: none;
-}
-
-.submenu {
-    display: none;
-}
-
-nav li:hover .submenu {
-    display: inline-block;
-    position: absolute;
-    top: 100%;
-    left: 0px;
-    padding: 0px;
-    z-index: 1000;
-}
-
-.submenu li {
-    border-bottom: 1px solid grey;
-}
-
-.submenu li a {
-    padding: 15px 30px;
-    font-size: 13px;
-    color: black;
-    width: 150px;
+	list-style-type: none;
 }
 
 nav a {
-    text-decoration: none;
-    display: inline-block;
+	text-decoration: none;
+	display: inline-block;
 }
 
-.item1:hover {
-    border-top: 3px solid rgba(255, 92, 92, 0.774);
-    background-color: rgba(224, 130, 130, 0.774);
+.menu1:hover {
+	border-top: 5px solid rgba(255, 152, 121, 0.75);
 }
 
-.item1 .submenu {
-    background-color: rgba(224, 130, 130, 0.774);
+.menu2:hover {
+	border-top: 5px solid rgba(255, 255, 121, 0.75);
 }
 
-.item2:hover {
-    border-top: 3px solid rgba(121, 255, 121, 0.774);
-    background-color: rgba(116, 179, 116, 0.774);
-}
-
-.item2 .submenu {
-    background-color: rgba(116, 179, 116, 0.774);
-}
-
-.item3:hover {
-    border-top: 3px solid rgba(199, 116, 255, 0.774);
-    background-color: rgba(160, 119, 187, 0.774);
-}
-
-.item3 .submenu {
-    background-color: rgba(160, 119, 187, 0.774);
+.menu3:hover {
+	border-top: 5px solid rgba(121, 255, 121, 0.75);
 }
