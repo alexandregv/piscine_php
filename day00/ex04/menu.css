@@ -1,0 +1,91 @@
+body {
+    font-family: helvetica, serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+nav {
+    width: 100%;
+    background-color: rgba(68, 68, 68, 0.575);
+}
+
+nav > ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+nav > ul > li {
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    padding: 20px 30px;
+    color: white;
+}
+
+nav > ul::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+nav li {
+    list-style-type: none;
+}
+
+.submenu {
+    display: none;
+}
+
+nav li:hover .submenu {
+    display: inline-block;
+    position: absolute;
+    top: 100%;
+    left: 0px;
+    padding: 0px;
+    z-index: 1000;
+}
+
+.submenu li {
+    border-bottom: 1px solid grey;
+}
+
+.submenu li a {
+    padding: 15px 30px;
+    font-size: 13px;
+    color: black;
+    width: 150px;
+}
+
+nav a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.item1:hover {
+    border-top: 3px solid rgba(255, 92, 92, 0.774);
+    background-color: rgba(224, 130, 130, 0.774);
+}
+
+.item1 .submenu {
+    background-color: rgba(224, 130, 130, 0.774);
+}
+
+.item2:hover {
+    border-top: 3px solid rgba(121, 255, 121, 0.774);
+    background-color: rgba(116, 179, 116, 0.774);
+}
+
+.item2 .submenu {
+    background-color: rgba(116, 179, 116, 0.774);
+}
+
+.item3:hover {
+    border-top: 3px solid rgba(199, 116, 255, 0.774);
+    background-color: rgba(160, 119, 187, 0.774);
+}
+
+.item3 .submenu {
+    background-color: rgba(160, 119, 187, 0.774);
+}
