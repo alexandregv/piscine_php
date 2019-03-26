@@ -8,19 +8,19 @@
 	switch ($argv[2])
 	{
 		case "+":
-			echo $argv[1] + $argv[3];
+			echo $argv[1] + $argv[3] . "\n";
 			break;
 		case "-":
-			echo $argv[1] - $argv[3];
+			echo $argv[1] - $argv[3] . "\n";
 			break;
 		case "*";
-			echo $argv[1] * $argv[3];
+			echo $argv[1] * $argv[3] . "\n";
 			break;
 		case "/":
-			echo $argv[1] / $argv[3];
+			echo $argv[1] / $argv[3] . "\n";
 			break;
 		case "%":
-			echo $argv[1] % $argv[3];
+			echo $argv[1] % $argv[3] . "\n";
 			break;
 	}
 ?>
