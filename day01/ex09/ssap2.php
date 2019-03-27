@@ -1,48 +1,32 @@
 #!/usr/bin/php
-<?php
-	function cmp($a, $b)
+<?PHP
+	function	ssap2_sort($a, $b)
 	{
-		for ($i = 0; ($i < strlen($a) && $i < strlen($b)); $i++)
+		$len_a = strlen($a);
+		$len_b = strlen($b);
+		$a = strtolower($a);
+		$b = strtolower($b);
+		$i = 0;
+		$charset = implode('', array_merge(range('a', 'z'), array_merge(range('0', '9'), array_merge(range('!', '/'), array_merge(range(':', '@'), array_merge(range('[', '`'), range('{', '~')))))));
+		while ($i < $len_a || $i < $len_b)
 		{
-			$c1 = $a[$i];
-			$c2 = $b[$i];
-			if ($c1 == $c2)
-				continue ;
-			if (ctype_alpha($c1))
-			{
-				if (ctype_alpha($c2))
-				{
-					if (strcmp(strtolower($c1), strtolower($c2)) == 0)
-						continue ;
-					return (strcmp(strtolower($c1), strtolower($c2)));
-				}
+			$pos_a = strpos($charset, $a[$i]);
+			$pos_b = strpos($charset, $b[$i]);
+			if ($pos_a < $pos_b)
 				return (-1);
-			}
-			else if (is_numeric($c1))
-			{
-				if (ctype_alpha($c2))
-					return (1);
-				else if (is_numeric($c2))
-					return (strcmp($c1, $c2));
-				return (-1);
-			}
-			else
-			{
-				if (!ctype_alpha($c2) && !is_numeric($c2))
-					return (strcmp($c1, $c2));
+			else if ($pos_a > $pos_b)
 				return (1);
-			}
+			else
+				++$i;
 		}
-		return (strlen($a) - strlen($b));
 	}
 
 	if ($argc < 2)
-		return ;
+		return;
+
 	array_shift($argv);
-	$array = array();
-	foreach ($argv as $arg)
-		$array = array_merge($array, array_filter(explode(' ', trim($argv)), "strlen"));
-	usort($arr, "cmp");
-	foreach ($arr as $str)
-		printf("%s\n", $str);
+	$tab = explode(' ', preg_replace('/ +/', ' ', trim(implode(' ', $argv))));
+	usort($tab, 'ssap2_sort');
+	foreach ($tab as $value)
+		echo $value, "\n";
 ?>

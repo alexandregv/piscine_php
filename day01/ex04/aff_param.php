@@ -1,6 +1,11 @@
 #!/usr/bin/php
 <?php
-	next($argv);
-	foreach ($argv as $arg)
-		echo $arg . "\n";
+	function ft_print_array($array)
+	{
+		foreach ($array as $line)
+			echo $line, "\n";
+	}
+
+	array_shift($argv);
+	ft_print_array($argv);
 ?>

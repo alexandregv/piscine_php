@@ -1,7 +1,8 @@
 <?php
 	function ft_split($str)
 	{
-		return explode(" ", preg_replace('/ +/', ' ', trim($str)));
+		$tab = explode(" ", preg_replace('/ +/', ' ', trim($str)));
+		sort($tab);
+		return ($tab));
 	}
-	//print_r(ft_split("      Hello          World AAA   "));
 ?>
