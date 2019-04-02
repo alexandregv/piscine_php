@@ -9,6 +9,8 @@ class Color
 	public $blue = 0;
 	public $dec = 0;
 
+	// ======[ Special methods ]=====
+
 	function __construct($params)
 	{
 		if (!empty($params['rgb']))
@@ -38,10 +40,14 @@ class Color
 		return ("Color( red: " . str_pad($this->red, 3, ' ', STR_PAD_LEFT) . ", green: " . str_pad($this->green, 3, ' ', STR_PAD_LEFT) . ", blue: " . str_pad($this->blue, 3, ' ', STR_PAD_LEFT) . " )");
 	}
 
-	public function doc()
+	// ======[ Class methods ]=====
+
+	public static function doc()
 	{
 		return "\n" . file_get_contents('Color.doc.txt');
 	}
+
+	// ======[ Intance methods ]=====
 
 	public function add($other)
 	{
