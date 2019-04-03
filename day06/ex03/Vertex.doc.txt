@@ -1,0 +1,14 @@
+<- Vertex ----------------------------------------------------------------------
+The Vertex class handles vertexes.
+
+An instance can be constructed from x,y,z,,w coordinates and a color :
+new Vertex(array('x' => 1, 'y' => 2, 'z' => 3));
+new Vertex(array('x' => 1, 'y' => 2, 'z' => 3, 'w' => 4));
+new Vertex(array('x' => 1, 'y' => 2, 'z' => 3, 'w' => 4, 'color' => $color));
+
+'w' and 'color' are optionals parameters.
+By default, they will be 1.0 and a white instance of the Color class.
+
+
+The class does not provide any method.
+---------------------------------------------------------------------- Vertex ->

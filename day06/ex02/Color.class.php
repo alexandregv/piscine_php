@@ -4,6 +4,8 @@ class Color
 {
 	public static $verbose = False;
 
+	// ======[ Atributes ]=====
+
 	public $red = 0;
 	public $green = 0;
 	public $blue = 0;
@@ -42,10 +44,7 @@ class Color
 
 	// ======[ Class methods ]=====
 
-	public static function doc()
-	{
-		return "\n" . file_get_contents('Color.doc.txt');
-	}
+	public static function doc() { return "\n" . file_get_contents(__CLASS__ . '.doc.txt'); }
 
 	// ======[ Intance methods ]=====
 

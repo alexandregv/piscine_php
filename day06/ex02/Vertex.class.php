@@ -6,6 +6,8 @@ class Vertex
 {
 	public static $verbose = False;
 
+	// ======[ Atributes ]=====
+	
 	private $_x;
 	private $_y;
 	private $_z;
@@ -50,10 +52,7 @@ class Vertex
 
 	// ======[ Class methods ]=====
 
-	public static function doc()
-	{
-		return "\n" . file_get_contents('Vertex.doc.txt');
-	}
+	public static function doc() { return "\n" . file_get_contents(__CLASS__ . '.doc.txt'); }
 
 	// ======[ Accessors ]=====
 

@@ -1,0 +1,31 @@
+<- Camera ----------------------------------------------------------------------
+The Camera class represents the camera which is "viewing" the scene.
+
+$cam  = new Camera( array( 'origin' => $vtxO,
+						   'orientation' => $R,
+						   'width' => 640,
+						   'height' => 480,
+						   'fov' => 60,
+						   'near' => 1.0,
+						   'far' => 100.0) );
+
+An instance can be constructed from various options :
+- 'origin'      : Vertex positioning the camera in the world.
+- 'orientation' : Orientation of the camera.
+- 'width'       : Width of the image, in pixels.
+- 'height'      : Heigth of the image, in pixels.
+- 'ratio'       : Image ratio. Incompatible with 'width' and 'height' options.
+- 'fov'         : Field Of View (FOV), in radians.
+- 'near'        : Near clipping map.
+- 'far'         : Far clipping map.
+
+new Vector(array('preset' => IDENTITY));
+new Vector(array('preset' => SCALE, 'scale' => 42));
+
+The class provides the following method :
+
+Matrix	mult( Matrix $rhs );
+
+Vertex watchVertex( Vertex $worldVertex )
+Transforms a "world Vertex" in a "screen Vertex" (pixels).
+---------------------------------------------------------------------- Camera ->
