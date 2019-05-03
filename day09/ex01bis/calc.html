@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Calc</title>
+</head>
+<body>
+    <form action="" style="width: 70%; display: inline; margin: auto;">
+			  <input id="left" type="text" style="width: 30px;">
+        <select name="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+			  <input id="right" type="text" style="width: 30px;">
+        <input type="submit" value="Try me!">
+    </form>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function display(text)
+        {
+            console.log(text);
+            alert(text);
+            return false;
+        }
+			
+        $('form').on('submit', function (event) {
+            event.preventDefault();
+            var form = $(this);
+            var left = form.find('input[id="left"]').val();
+            var operator = form.find('select[name="operator"]').val();
+            var right = form.find('input[id="right"]').val();
+					
+            if (parseInt(left) != left || parseInt(right) != right)
+                return display('Error :(');
+            left = parseInt(left);
+            right = parseInt(right);
+            if (left < 0 || right < 0)
+                return display('Error :(');
+            if (['+', '-', '*', '/', '%'].indexOf(operator) == -1)
+                return display('Error :(');
+            if ((operator === '/' || operator === '%') && right == 0)
+                return display("It's over 9000!");
+					
+						display(eval(`${left} ${operator} ${right}`));
+        });
+			
+        setInterval(function () {
+            alert('Please, use me...');
+        }, 30000)
+    </script>
+</body>
+</html>

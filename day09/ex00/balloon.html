@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Balloon</title>
+	</head>
+	<body>
+		<div id="balloon" style="background-color: red; width: 200px; height: 200px; border-radius: 50%; margin: auto;" onClick="handleClick()" onMouseLeave="handleLeave();">
+		</div>
+		<script>
+			color = 0;
+			balloon = document.getElementById('balloon')
+			
+			function handleClick() {
+				balloon.style.height = (parseInt(balloon.style.height) + 10) + "px";
+				balloon.style.width  = (parseInt(balloon.style.width)  + 10) + "px";
+				
+				if (parseInt(balloon.style.width) > 420)
+				{
+					balloon.style.height = "200px";
+					balloon.style.width  = "200px";
+				}
+				
+				if (color == 0)
+				{
+					balloon.style.backgroundColor = "green";	
+					color = 1;
+				}
+				else if (color == 1)
+				{
+					balloon.style.backgroundColor = "blue";	
+					color = 2;
+				}
+				else if (color == 2)
+				{
+					balloon.style.backgroundColor = "red";	
+					color = 0;
+				}
+			}
+			
+			function handleLeave() {
+				balloon.style.height = (parseInt(balloon.style.height) - 5) + "px";
+				balloon.style.width  = (parseInt(balloon.style.width)  - 5) + "px";
+				
+				if (parseInt(balloon.style.width) < 200)
+				{
+					balloon.style.height = "200px";
+					balloon.style.width  = "200px";
+				}
+				
+				if (color == 0)
+				{
+					balloon.style.backgroundColor = "green";	
+					color = 1;
+				}
+				else if (color == 1)
+				{
+					balloon.style.backgroundColor = "red";	
+					color = 2;
+				}
+				else if (color == 2)
+				{
+					balloon.style.backgroundColor = "blue";	
+					color = 0;
+				}
+			}
+		</script>
+	</body>
+</html>

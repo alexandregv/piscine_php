@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Balloon</title>
+	</head>
+	<body>
+		<div id="calc" style="width: 70%; display: inline; margin: auto;">
+			<input id="left" type="text" style="width: 30px;">
+			<select name="operator" id="operator">
+				<option value="+">+</option>
+				<option value="-">-</option>
+				<option value="*">*</option>
+				<option value="/">/</option>
+				<option value="%">%</option>
+			</select>
+			<input id="right" type="text" style="width: 30px;">
+			<input type="submit" value="Try me!" onClick="return doCalc();">
+		</div>
+		<script>
+			function doCalc()
+			{
+				result = 0;
+				
+				left = document.getElementById('left').value;
+				right = document.getElementById('right').value;
+				
+				if (isNaN(left) || isNaN(right))
+					return alert('Error :(');
+				
+				left = parseInt(left);
+				right = parseInt(right);
+				operator = document.getElementById('operator').value;
+				
+				if (left < 0 || right < 0)
+					return alert('Error :(');
+				
+				if ((operator == '/' || operator == '%') && right == 0)
+				{
+					
+					console.log("It's over 9000!");
+					return alert("It's over 9000!");
+				}
+				
+				result = eval(`${left} ${operator} ${right}`);
+				
+				console.log(result);
+				alert(result);
+			}
+			
+			setInterval(function() {
+				alert('Please, use me...');
+			}, 30 * 1000);
+		</script>
+	</body>
+</html>
